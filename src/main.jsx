@@ -6,6 +6,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Component/Home/Home';
 import OrderReview from './Component/OrderReview/OrderReview';
 import Main from './Component/Layout/Main';
+import Grandpa from './Component/Grandpa/Grandpa';
+import About from './Component/About/About';
+import Contact from './Component/Contact/Contact';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -17,6 +20,18 @@ const router = createBrowserRouter([
         loader: () => fetch('data.json'),
       },
       { path: 'review', element: <OrderReview></OrderReview> },
+      {
+        path: 'grandpa',
+        element: <Grandpa></Grandpa>,
+      },
+      {
+        path: 'about',
+        element: <About></About>,
+      },
+      {
+        path: 'contact',
+        element: <Contact></Contact>,
+      },
     ],
   },
 ]);
